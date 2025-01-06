@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Abikael</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffd6e6;
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            font-size: 24px;
+            color: #ff1493;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>For Abikael ❤️</h1>
+    <button class="button" onclick="showLove()">Press Here!</button>
+    <div id="loveMessage" class="message"> Melkam Gena, I Love You! 💖</div>
+
+    <script>
+        function showLove() {
+            // Show the message
+            document.getElementById('loveMessage').style.display = 'block';
+            
+            // Trigger confetti
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff69b4', '#ff1493', '#ffd6e6']
+            });
+        }
+    </script>
+</body>
+</html>
